@@ -75,11 +75,9 @@ nav a:focus {
 }
 
 .hero {
-  position: relative;
   min-height: 94vh;
   display: grid;
   place-items: center;
-  overflow: hidden;
   padding: 120px 24px 80px;
   color: var(--cream);
   background:
@@ -89,53 +87,34 @@ nav a:focus {
 }
 
 .hero-inner {
-  position: relative;
-  z-index: 1;
   width: min(920px, 100%);
   text-align: center;
 }
 
-.flower-line {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  color: rgba(82, 89, 67, 0.22);
-}
-
-.flower-line path,
-.flower-line circle {
+.floral-mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 18px 0 0;
+  color: rgba(82, 89, 67, 0.55);
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 1.35;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.flower-line circle:not(:first-of-type) {
-  fill: currentColor;
-  stroke: none;
+.floral-mark circle,
+.floral-mark path {
+  fill: none;
+  stroke: currentColor;
 }
 
-.flower-line-hero {
-  width: clamp(74px, 8vw, 130px);
-  right: clamp(24px, 11vw, 180px);
-  bottom: clamp(92px, 13vw, 180px);
-  color: rgba(255, 253, 248, 0.32);
-  transform: rotate(-10deg);
-}
-
-.flower-line-intro {
-  width: clamp(72px, 9vw, 120px);
-  right: clamp(22px, 8vw, 112px);
-  bottom: 34px;
-  transform: rotate(12deg);
-}
-
-.flower-line-travel {
-  width: clamp(66px, 8vw, 112px);
-  left: clamp(24px, 7vw, 112px);
-  bottom: 30px;
-  transform: rotate(-14deg);
+.floral-mark-light {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 18px;
+  color: rgba(247, 243, 236, 0.72);
 }
 
 .eyebrow,
@@ -169,7 +148,7 @@ h1 {
   position: relative;
   width: clamp(190px, 28vw, 330px);
   aspect-ratio: 1;
-  margin: clamp(38px, 7vw, 82px) auto clamp(26px, 4vw, 44px);
+  margin: clamp(38px, 7vw, 82px) auto clamp(18px, 3vw, 34px);
   display: grid;
   place-items: center;
   color: rgba(255, 253, 248, 0.95);
@@ -246,21 +225,10 @@ main > section:not(.hero) {
 
 .intro,
 .split-section {
-  position: relative;
   display: grid;
   grid-template-columns: minmax(220px, 0.85fr) minmax(280px, 1.15fr);
   gap: clamp(32px, 7vw, 88px);
   align-items: start;
-  overflow: hidden;
-}
-
-.intro > div,
-.intro > p,
-.split-section > div,
-.split-section > p,
-.timeline {
-  position: relative;
-  z-index: 1;
 }
 
 .section-kicker {
@@ -427,20 +395,6 @@ footer p {
   .hero {
     min-height: 92vh;
     padding-top: 116px;
-  }
-
-  .flower-line-hero {
-    width: 76px;
-    right: 22px;
-    bottom: 132px;
-  }
-
-  .flower-line-intro,
-  .flower-line-travel {
-    width: 74px;
-    right: 20px;
-    left: auto;
-    bottom: 18px;
   }
 
   .intro,
