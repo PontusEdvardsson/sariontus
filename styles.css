@@ -99,45 +99,43 @@ nav a:focus {
   position: absolute;
   z-index: 0;
   pointer-events: none;
+  color: rgba(82, 89, 67, 0.22);
+}
+
+.flower-line path,
+.flower-line circle {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.25;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.flower-bloom circle {
+.flower-line circle:not(:first-of-type) {
   fill: currentColor;
   stroke: none;
 }
 
-.flower-bloom circle:first-of-type {
-  fill: none;
-  stroke: currentColor;
-}
-
 .flower-line-hero {
-  width: clamp(210px, 24vw, 430px);
-  right: clamp(18px, 8vw, 128px);
-  bottom: clamp(60px, 10vw, 150px);
-  color: rgba(255, 253, 248, 0.22);
-  transform: rotate(-12deg);
+  width: clamp(74px, 8vw, 130px);
+  right: clamp(24px, 11vw, 180px);
+  bottom: clamp(92px, 13vw, 180px);
+  color: rgba(255, 253, 248, 0.32);
+  transform: rotate(-10deg);
 }
 
 .flower-line-intro {
-  width: clamp(150px, 18vw, 260px);
-  right: clamp(18px, 7vw, 96px);
-  bottom: 28px;
-  color: rgba(82, 89, 67, 0.13);
-  transform: rotate(14deg);
+  width: clamp(72px, 9vw, 120px);
+  right: clamp(22px, 8vw, 112px);
+  bottom: 34px;
+  transform: rotate(12deg);
 }
 
 .flower-line-travel {
-  width: clamp(140px, 17vw, 240px);
-  left: clamp(18px, 5vw, 72px);
-  bottom: 22px;
-  color: rgba(82, 89, 67, 0.15);
-  transform: rotate(-18deg);
+  width: clamp(66px, 8vw, 112px);
+  left: clamp(24px, 7vw, 112px);
+  bottom: 30px;
+  transform: rotate(-14deg);
 }
 
 .eyebrow,
@@ -432,15 +430,15 @@ footer p {
   }
 
   .flower-line-hero {
-    right: -56px;
-    bottom: 104px;
-    width: 230px;
+    width: 76px;
+    right: 22px;
+    bottom: 132px;
   }
 
   .flower-line-intro,
   .flower-line-travel {
-    width: 150px;
-    right: -36px;
+    width: 74px;
+    right: 20px;
     left: auto;
     bottom: 18px;
   }
