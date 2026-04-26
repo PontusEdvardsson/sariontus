@@ -75,9 +75,11 @@ nav a:focus {
 }
 
 .hero {
+  position: relative;
   min-height: 94vh;
   display: grid;
   place-items: center;
+  overflow: hidden;
   padding: 120px 24px 80px;
   color: var(--cream);
   background:
@@ -87,8 +89,55 @@ nav a:focus {
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   width: min(920px, 100%);
   text-align: center;
+}
+
+.flower-line {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flower-bloom circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+.flower-bloom circle:first-of-type {
+  fill: none;
+  stroke: currentColor;
+}
+
+.flower-line-hero {
+  width: clamp(210px, 24vw, 430px);
+  right: clamp(18px, 8vw, 128px);
+  bottom: clamp(60px, 10vw, 150px);
+  color: rgba(255, 253, 248, 0.22);
+  transform: rotate(-12deg);
+}
+
+.flower-line-intro {
+  width: clamp(150px, 18vw, 260px);
+  right: clamp(18px, 7vw, 96px);
+  bottom: 28px;
+  color: rgba(82, 89, 67, 0.13);
+  transform: rotate(14deg);
+}
+
+.flower-line-travel {
+  width: clamp(140px, 17vw, 240px);
+  left: clamp(18px, 5vw, 72px);
+  bottom: 22px;
+  color: rgba(82, 89, 67, 0.15);
+  transform: rotate(-18deg);
 }
 
 .eyebrow,
@@ -199,10 +248,21 @@ main > section:not(.hero) {
 
 .intro,
 .split-section {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(220px, 0.85fr) minmax(280px, 1.15fr);
   gap: clamp(32px, 7vw, 88px);
   align-items: start;
+  overflow: hidden;
+}
+
+.intro > div,
+.intro > p,
+.split-section > div,
+.split-section > p,
+.timeline {
+  position: relative;
+  z-index: 1;
 }
 
 .section-kicker {
@@ -369,6 +429,20 @@ footer p {
   .hero {
     min-height: 92vh;
     padding-top: 116px;
+  }
+
+  .flower-line-hero {
+    right: -56px;
+    bottom: 104px;
+    width: 230px;
+  }
+
+  .flower-line-intro,
+  .flower-line-travel {
+    width: 150px;
+    right: -36px;
+    left: auto;
+    bottom: 18px;
   }
 
   .intro,
