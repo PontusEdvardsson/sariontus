@@ -91,32 +91,6 @@ nav a:focus {
   text-align: center;
 }
 
-.floral-mark {
-  display: block;
-  width: 34px;
-  height: 34px;
-  margin: 18px 0 0;
-  color: rgba(82, 89, 67, 0.55);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.floral-mark circle,
-.floral-mark path {
-  fill: none;
-  stroke: currentColor;
-}
-
-.floral-mark-light {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto 18px;
-  color: rgba(247, 243, 236, 0.72);
-}
-
 .eyebrow,
 .section-kicker {
   margin: 0 0 10px;
@@ -148,7 +122,7 @@ h1 {
   position: relative;
   width: clamp(190px, 28vw, 330px);
   aspect-ratio: 1;
-  margin: clamp(38px, 7vw, 82px) auto clamp(18px, 3vw, 34px);
+  margin: clamp(38px, 7vw, 82px) auto clamp(26px, 4vw, 44px);
   display: grid;
   place-items: center;
   color: rgba(255, 253, 248, 0.95);
